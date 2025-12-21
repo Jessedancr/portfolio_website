@@ -21,6 +21,12 @@ class _MobileScaffoldState extends State<MobileScaffold> {
   late ScrollController _scrollController;
   late Timer _timer;
 
+  final GlobalKey aboutMeKey = GlobalKey();
+  final GlobalKey brandsKey = GlobalKey();
+  final GlobalKey worksKey = GlobalKey();
+  final GlobalKey contactKey = GlobalKey();
+
+
   List<String> brands = [
     'assets/brands/ffwnm.jpeg',
     'assets/brands/tmg.jpeg',
@@ -64,6 +70,31 @@ class _MobileScaffoldState extends State<MobileScaffold> {
     super.dispose();
   }
 
+  void scrollToSection(String section) {
+    GlobalKey key;
+    switch (section) {
+      case "About me":
+        key = aboutMeKey;
+        break;
+      case "Brands I've worked with":
+        key = brandsKey;
+        break;
+      case "My recent works":
+        key = worksKey;
+        break;
+      case "Contact me":
+        key = contactKey;
+        break;
+      default:
+        return;
+    }
+    Scrollable.ensureVisible(
+      key.currentContext!,
+      duration: const Duration(seconds: 1),
+      curve: Curves.easeInOut,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -71,11 +102,12 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         body: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
-            MobileNavBar(),
+            MobileNavBar(onMenuItemSelected: scrollToSection),
             MobileHeader(),
 
             // * About me
             SliverToBoxAdapter(
+              key: aboutMeKey,
               child: Padding(
                 padding: const EdgeInsets.only(top: 16.0, left: 10, right: 10),
                 child: Row(
@@ -115,6 +147,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
 
             // * Brands worked with
             SliverToBoxAdapter(
+              key: brandsKey,
               child: Column(
                 children: [
                   const SizedBox(height: 20),
@@ -153,6 +186,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
 
             // * Some recent works
             SliverToBoxAdapter(
+              key: worksKey,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -194,8 +228,9 @@ class _MobileScaffoldState extends State<MobileScaffold> {
               ),
             ),
 
-            // * Contact me
+            //  * Contact me
             SliverToBoxAdapter(
+              key: contactKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -225,8 +260,6 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                 ],
               ),
             ),
-
-            // SliverFadeTransition(opacity: opacity)
             SliverFillRemaining(
               hasScrollBody: false,
               fillOverscroll: true,
