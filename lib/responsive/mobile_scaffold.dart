@@ -137,7 +137,10 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                             ),
                             child: ClipRRect(
                               borderRadius: BorderRadiusGeometry.circular(20),
-                              child: Image.asset(brands[index]),
+                              child: Image.asset(
+                                brands[index],
+                                filterQuality: mediumImageQuality,
+                              ),
                             ),
                           );
                         },

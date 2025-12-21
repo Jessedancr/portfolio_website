@@ -21,7 +21,11 @@ class MobileHeader extends StatelessWidget {
               bottom: 0,
               left: 0,
               right: 0,
-              child: Image.asset('assets/dance_img1.jpg', fit: BoxFit.cover),
+              child: Image.asset(
+                'assets/dance_img1.jpg',
+                fit: BoxFit.cover,
+                filterQuality: mediumImageQuality,
+              ),
             ),
 
             // * Glass Box Overlay
@@ -108,7 +112,6 @@ class MobileHeader extends StatelessWidget {
             backgroundColor: context.colorScheme.surface,
             fontSize: 12,
             fontWeight: FontWeight.w600,
-            
           ),
         ),
         collapseMode: CollapseMode.parallax,

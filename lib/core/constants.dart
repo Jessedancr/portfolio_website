@@ -20,3 +20,5 @@ final TextStyle subtitleTextStyle = TextStyle(
   fontWeight: FontWeight.w400,
   color: Colors.white,
 );
+
+final FilterQuality mediumImageQuality = FilterQuality.medium;
