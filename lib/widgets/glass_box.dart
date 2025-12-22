@@ -18,8 +18,8 @@ class GlassBox extends StatelessWidget {
     this.height,
     this.child,
     this.borderRadius = const BorderRadius.all(Radius.circular(0)),
-    this.sigmaX = 0.5,
-    this.sigmaY = 0.5,
+    this.sigmaX = 2,
+    this.sigmaY = 2,
     this.opacity1 = 0.1,
     this.opacity2 = 0.3,
   });

@@ -64,14 +64,17 @@ class MobileFooter extends StatelessWidget {
             // * CONTACT
             Text(
               'jesseikemefuna@gmail.com',
-              style: TextStyle(color: Colors.grey[600], fontSize: 12),
+              style: subtitleTextStyle.copyWith(color: Colors.grey[600]),
             ),
             SizedBox(height: 5),
 
             // * COPYRIGHT
             Text(
               '© 2025 Ikemefuna Jesse',
-              style: TextStyle(color: Colors.grey[700], fontSize: 11),
+              style: subtitleTextStyle.copyWith(
+                color: Colors.grey[600],
+                fontSize: 10,
+              ),
             ),
           ],
         ),

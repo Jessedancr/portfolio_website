@@ -28,7 +28,7 @@ class ProjectContainer extends StatelessWidget {
             child: Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              height: 200,
+              height: 500,
               width: double.infinity,
               filterQuality: mediumImageQuality,
             ),
@@ -64,17 +64,11 @@ class ProjectContainer extends StatelessWidget {
                       children: [
                         Text(
                           jobTitle,
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: subtitleTextStyle.copyWith(fontSize: 14),
                         ),
                         Text(
                           jobDescr,
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                          ),
+                          style: subtitleTextStyle.copyWith(fontSize: 10),
                         ),
                       ],
                     ),

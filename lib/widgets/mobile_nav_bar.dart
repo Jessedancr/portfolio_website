@@ -24,7 +24,7 @@ class MobileNavBar extends StatelessWidget {
               PopupMenuButton(
                 borderRadius: BorderRadius.circular(20),
                 popUpAnimationStyle: AnimationStyle(
-                  duration: Duration(milliseconds: 600),
+                  duration: Duration(milliseconds: 400),
                 ),
                 color: context.colorScheme.secondaryContainer,
                 onSelected: onMenuItemSelected,
@@ -41,9 +41,9 @@ class MobileNavBar extends StatelessWidget {
                     child: Text('About me'),
                   ),
                   PopupMenuItem(
-                    value: "Brands I've worked with",
+                    value: "Collaborations",
                     labelTextStyle: WidgetStatePropertyAll(subtitleTextStyle),
-                    child: Text("Brands I've worked with"),
+                    child: Text("Collaborations"),
                   ),
                   PopupMenuItem(
                     value: 'My recent works',

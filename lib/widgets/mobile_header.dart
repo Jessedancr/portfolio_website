@@ -7,11 +7,9 @@ class MobileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> danceStyles = ["Hiphop", "Afro", "Popping", "Krump"];
     return SliverAppBar(
       centerTitle: true,
       expandedHeight: context.screenHeight * 0.8,
-      backgroundColor: Colors.black,
       flexibleSpace: FlexibleSpaceBar(
         background: Stack(
           children: [
@@ -36,11 +34,7 @@ class MobileHeader extends StatelessWidget {
               alignment: Alignment.topCenter,
               child: Text(
                 'Professional Dance Artiste',
-                style: TextStyle(
-                  color: context.colorScheme.surface,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                ),
+                style: headerTextStyle.copyWith(color: Colors.black),
               ),
             ),
 
@@ -81,17 +75,16 @@ class MobileHeader extends StatelessWidget {
                         children: [
                           Text(
                             '0${danceIndex[index].toString()}',
-                            style: TextStyle(
+                            style: subtitleTextStyle.copyWith(
                               color: context.colorScheme.surface,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
                             ),
                           ),
                           Text(
                             danceStyles[index],
-                            style: TextStyle(
-                              color: context.colorScheme.surface,
+                            style: subtitleTextStyle.copyWith(
                               fontSize: 14,
+                              color: context.colorScheme.surface,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -107,11 +100,10 @@ class MobileHeader extends StatelessWidget {
         title: Text(
           'Energy. Expression. Every Movement Tells a Story.',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: context.colorScheme.onSurface,
-            backgroundColor: context.colorScheme.surface,
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
+          style: subtitleTextStyle.copyWith(
+            fontSize: 14,
+            color: context.colorScheme.surface,
+            fontWeight: FontWeight.bold,
           ),
         ),
         collapseMode: CollapseMode.parallax,

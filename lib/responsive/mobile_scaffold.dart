@@ -26,13 +26,6 @@ class _MobileScaffoldState extends State<MobileScaffold> {
   final GlobalKey worksKey = GlobalKey();
   final GlobalKey contactKey = GlobalKey();
 
-
-  List<String> brands = [
-    'assets/brands/ffwnm.jpeg',
-    'assets/brands/tmg.jpeg',
-    'assets/brands/nike.jpg',
-  ];
-
   @override
   void initState() {
     super.initState();
@@ -76,7 +69,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
       case "About me":
         key = aboutMeKey;
         break;
-      case "Brands I've worked with":
+      case "Collaborations":
         key = brandsKey;
         break;
       case "My recent works":
@@ -90,7 +83,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
     }
     Scrollable.ensureVisible(
       key.currentContext!,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 800),
       curve: Curves.easeInOut,
     );
   }
@@ -109,26 +102,23 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             SliverToBoxAdapter(
               key: aboutMeKey,
               child: Padding(
-                padding: const EdgeInsets.only(top: 16.0, left: 10, right: 10),
+                padding: const EdgeInsets.only(
+                  top: 16.0,
+                  left: 10,
+                  right: 10,
+                  bottom: 20,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     UserCircleAvatar(),
-
                     const SizedBox(width: 20),
 
                     Expanded(
                       child: Column(
                         children: [
-                          Text(
-                            'About me',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
+                          Text('About me', style: headerTextStyle),
                           Text(
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, "
                             "nihil ducimus. Minima esse eligendi cum repudiandae tenetur beatae "
@@ -136,6 +126,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                             "explicabo tempora culpa",
                             softWrap: true,
                             textAlign: TextAlign.justify,
+                            style: subtitleTextStyle,
                           ),
                         ],
                       ),
@@ -150,29 +141,27 @@ class _MobileScaffoldState extends State<MobileScaffold> {
               key: brandsKey,
               child: Column(
                 children: [
-                  const SizedBox(height: 20),
-
                   Text("Proudly worked with", style: headerTextStyle),
-                  const SizedBox(height: 20),
-
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0,
+                      vertical: 20,
+                    ),
                     child: SizedBox(
-                      height: 80.0,
+                      height: 50.0,
                       child: ListView.builder(
                         controller: _scrollController,
                         scrollDirection: Axis.horizontal,
                         itemCount: brands.length,
                         itemBuilder: (context, index) {
                           return Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 25.0,
-                            ),
+                            padding: const EdgeInsets.only(left: 30.0),
                             child: ClipRRect(
                               borderRadius: BorderRadiusGeometry.circular(20),
                               child: Image.asset(
                                 brands[index],
                                 filterQuality: mediumImageQuality,
+                                width: 50,
                               ),
                             ),
                           );
@@ -188,10 +177,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             SliverToBoxAdapter(
               key: worksKey,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 20,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -223,6 +209,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                       jobDescr: 'Short Description',
                       leadingIcon: FontAwesomeIcons.spinner,
                     ),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),
@@ -235,9 +222,14 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Contact me', style: headerTextStyle),
+                  Text(
+                    "Whether it's for a collaboration, booking, or just to say hello,I'd love to hear from you!",
+                    textAlign: TextAlign.center,
+                    style: subtitleTextStyle,
+                  ),
                   const SizedBox(height: 10),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ContactMeTile(
                         icon: FontAwesomeIcons.instagram,
@@ -260,6 +252,8 @@ class _MobileScaffoldState extends State<MobileScaffold> {
                 ],
               ),
             ),
+
+            // * Footer
             SliverFillRemaining(
               hasScrollBody: false,
               fillOverscroll: true,
