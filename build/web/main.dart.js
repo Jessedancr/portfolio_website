@@ -70756,7 +70756,7 @@ $.fB=function(){var s=t.n
 return A.c([A.c([0.41233895,0.35762064,0.18051042],s),A.c([0.2126,0.7152,0.0722],s),A.c([0.01932141,0.11916382,0.95034478],s)],t.zg)}()
 $.nN=A.c([95.047,100,108.883],t.n)
 $.aaZ=A.c(["Hiphop","Afro","Popping","Krump"],t.s)
-$.ak2=A.c(["assets/brands/ffwnm.jpeg","assets/brands/tmg.jpeg","assets/brands/monster.jpg","assets/brands/redbull.jpg","assets/brands/addidas.jpg"],t.s)
+$.ak2=A.c(["assets/ffwnm.jpeg","assets/tmg.jpeg","assets/monster.jpg","assets/redbull.jpg","assets/addidas.jpg"],t.s)
 $.abu=function(){var s="Short Description",r=t.N,q=t.z
 return A.c([A.aG(["imagePath","assets/dance_img2.jpg","jobTitle","Job Title","jobDescr",s,"leadingIcon",B.kn],r,q),A.aG(["imagePath","assets/dance_img3.jpg","jobTitle","Job Title","jobDescr",s,"leadingIcon",B.kp],r,q),A.aG(["imagePath","assets/dance_img4.jpg","jobTitle","Job Title","jobDescr",s,"leadingIcon",B.ko],r,q)],t.H7)}()
 $.apQ=A.w(t.S,A.ak("axV"))

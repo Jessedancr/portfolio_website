@@ -29,11 +29,11 @@ final FilterQuality mediumImageQuality = FilterQuality.medium;
 final List<String> danceStyles = ["Hiphop", "Afro", "Popping", "Krump"];
 
 List<String> brands = [
-  'assets/brands/ffwnm.jpeg',
-  'assets/brands/tmg.jpeg',
-  'assets/brands/monster.jpg',
-  'assets/brands/redbull.jpg',
-  'assets/brands/addidas.jpg',
+  'assets/ffwnm.jpeg',
+  'assets/tmg.jpeg',
+  'assets/monster.jpg',
+  'assets/redbull.jpg',
+  'assets/addidas.jpg',
 ];
 
 final List<Map<String, dynamic>> recentWorks = [
