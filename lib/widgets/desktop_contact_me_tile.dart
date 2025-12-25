@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_website/core/constants.dart';
 import 'package:portfolio_website/widgets/touchable_opacity.dart';
@@ -43,10 +42,9 @@ class DesktopContactMeTile extends StatelessWidget {
                   CircleAvatar(
                     radius: 20,
                     backgroundColor: context.colorScheme.onPrimaryContainer,
-                    child: SvgPicture.asset(
-                      'assets/svgs/up-right-arrow.svg',
+                    child: Icon(
+                      Icons.chevron_right,
                       color: context.colorScheme.inversePrimary,
-                      height: 12,
                     ),
                   ),
                 ],

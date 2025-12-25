@@ -31,8 +31,9 @@ final List<String> danceStyles = ["Hiphop", "Afro", "Popping", "Krump"];
 List<String> brands = [
   'assets/brands/ffwnm.jpeg',
   'assets/brands/tmg.jpeg',
-  'assets/brands/nike.png',
-  'assets/brands/pepsi.jpg',
+  'assets/brands/monster.jpg',
+  'assets/brands/redbull.jpg',
+  'assets/brands/addidas.jpg',
 ];
 
 final List<Map<String, dynamic>> recentWorks = [

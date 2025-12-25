@@ -28,7 +28,7 @@ class ProjectContainer extends StatelessWidget {
             child: Image.asset(
               imagePath,
               fit: BoxFit.cover,
-              height: 500,
+              height: context.screenHeight,
               width: double.infinity,
               filterQuality: mediumImageQuality,
             ),
