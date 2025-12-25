@@ -27,7 +27,13 @@ class MobileHeader extends StatelessWidget {
             ),
 
             // * Glass Box Overlay
-            Positioned(top: 0, bottom: 0, left: 0, right: 0, child: GlassBox()),
+            Positioned(
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: GlassBox(opacity1: 0.5, opacity2: 0.5),
+            ),
 
             // * Subtitle
             Align(
