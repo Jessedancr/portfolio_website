@@ -123,10 +123,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
                           style: headerTextStyle.copyWith(fontSize: 40),
                         ),
                         Text(
-                          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, "
-                          "nihil ducimus. Minima esse eligendi cum repudiandae tenetur beatae "
-                          "adipisci, vitae amet, facilis, alias ab pariatur numquam nemo "
-                          "explicabo tempora culpa",
+                          AppTexts.aboutMe,
                           softWrap: true,
                           textAlign: TextAlign.justify,
                           style: subtitleTextStyle.copyWith(fontSize: 24),
@@ -202,7 +199,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
             ),
           ),
           SliverGrid.builder(
-            itemCount: 3,
+            itemCount: recentWorks.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,

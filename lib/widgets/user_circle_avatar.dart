@@ -14,7 +14,7 @@ class UserCircleAvatar extends StatelessWidget {
         border: Border.all(color: context.colorScheme.primary, width: 3),
         boxShadow: [
           BoxShadow(
-            color: context.colorScheme.primary.withOpacity(0.3),
+            color: context.colorScheme.primary.withValues(alpha: 0.3),
             blurRadius: 15,
             spreadRadius: 2,
           ),
@@ -23,7 +23,7 @@ class UserCircleAvatar extends StatelessWidget {
       child: CircleAvatar(
         radius: radius,
         backgroundColor: context.colorScheme.primaryContainer,
-        backgroundImage: AssetImage('assets/dance_img5.jpg'),
+        backgroundImage: AssetImage('headshot'.jpeg),
       ),
     );
   }

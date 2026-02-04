@@ -25,10 +25,7 @@ class MobileFooter extends StatelessWidget {
             ),
 
             // * DEVELOPER CREDIT
-            Text(
-              'Designed & Developed by Jessedancr',
-              style: subtitleTextStyle,
-            ),
+            Text('Designed & Developed by TRACE', style: subtitleTextStyle),
             SizedBox(height: 15),
 
             // * SOCIAL LINKS

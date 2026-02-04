@@ -18,7 +18,10 @@ class DesktopNavBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('John Doe', style: headerTextStyle.copyWith(fontSize: 30)),
+              Text(
+                "Ikemefuna 'Trace' Jesse",
+                style: headerTextStyle.copyWith(fontSize: 30),
+              ),
 
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

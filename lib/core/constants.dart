@@ -25,34 +25,52 @@ final TextStyle subtitleTextStyle = TextStyle(
 );
 
 final FilterQuality mediumImageQuality = FilterQuality.medium;
+final FilterQuality highImageQuality = FilterQuality.high;
 
-final List<String> danceStyles = ["Hiphop", "Afro", "Popping", "Krump"];
+final List<String> danceStyles = [
+  "Hiphop",
+  "Afro Fusion",
+  "Animation",
+  "Contemporary",
+];
 
 List<String> brands = [
-  'assets/ffwnm.jpeg',
-  'assets/tmg.jpeg',
-  'assets/monster.jpg',
-  'assets/redbull.jpg',
-  'assets/addidas.jpg',
+  'ffwnm'.jpeg,
+  'tmg'.jpeg,
+  'rage_fam'.jpeg,
+  'vybe_nation'.jpeg,
 ];
 
 final List<Map<String, dynamic>> recentWorks = [
   {
-    'imagePath': 'assets/dance_img2.jpg',
+    'imagePath': 'fun'.jpeg,
     'jobTitle': 'Job Title',
     'jobDescr': 'Short Description',
     'leadingIcon': FontAwesomeIcons.bolt,
   },
   {
-    'imagePath': 'assets/dance_img3.jpg',
+    'imagePath': 'it_depends'.jpeg,
     'jobTitle': 'Job Title',
     'jobDescr': 'Short Description',
     'leadingIcon': FontAwesomeIcons.solidWebAwesome,
   },
   {
-    'imagePath': 'assets/dance_img4.jpg',
+    'imagePath': 'luvah'.jpeg,
     'jobTitle': 'Job Title',
     'jobDescr': 'Short Description',
     'leadingIcon': FontAwesomeIcons.spinner,
   },
 ];
+
+extension AssetName on String {
+  String get svg => 'assets/$this.svg';
+  String get png => 'assets/$this.png';
+  String get jpeg => 'assets/$this.jpeg';
+  String get jpg => 'assets/$this.jpg';
+  String get mp4 => 'assets/$this.mp4';
+}
+
+class AppTexts {
+  static const String aboutMe =
+      "Professional dance artiste performing under the brand TRACE, a movement identity rooted in authenticity and self-expression. Experienced in stage performances, dance video productions, and brand collaborations, with a strong foundation in freestyle, hip-hop, and performance-driven choreography.";
+}

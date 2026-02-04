@@ -29,7 +29,7 @@ class DesktopFooter extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Designed & Developed by Jessedancr',
+                  'Designed & Developed by TRACE',
                   style: subtitleTextStyle,
                 ),
 

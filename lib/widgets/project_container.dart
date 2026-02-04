@@ -30,7 +30,7 @@ class ProjectContainer extends StatelessWidget {
               fit: BoxFit.cover,
               height: context.screenHeight,
               width: double.infinity,
-              filterQuality: mediumImageQuality,
+              filterQuality: highImageQuality,
             ),
           ),
         ),

@@ -19,9 +19,9 @@ class DesktopHeader extends StatelessWidget {
               left: 0,
               right: 0,
               child: Image.asset(
-                'assets/dance_img1.jpg',
+                'header_img'.jpeg,
                 fit: BoxFit.cover,
-                filterQuality: mediumImageQuality,
+                filterQuality: highImageQuality,
               ),
             ),
 

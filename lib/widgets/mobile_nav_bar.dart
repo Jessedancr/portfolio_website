@@ -18,7 +18,7 @@ class MobileNavBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('John Doe', style: headerTextStyle),
+              Text("Ikemefuna 'Trace' Jesse", style: headerTextStyle),
 
               // * Pop up menu
               PopupMenuButton(
